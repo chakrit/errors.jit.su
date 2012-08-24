@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  if errors
+    for error in errors
+      .row.nodejitsu
+        .well
+          .container
+            .row
+              .span6
+                h4= error.name
+                pre(style='background-color: white;')= error.description
+              .span6
+                h4 Cause:
+                p= error.cause
+                h4 Solution:
+                p= error.solution
+
+      
