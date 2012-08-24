@@ -16,4 +16,6 @@ var ErrorModel = module.exports = resourceful.define('error', function() {
   this.string('description');
   this.string('cause');
   this.string('solution');
+
+  this.number('reputation');
 });

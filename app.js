@@ -32,5 +32,8 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.post('/errors', routes.createError);
+app.post('/errors/:id/edit', routes.updateError);
+app.get('/errors/:id/edit', routes.editError);
+app.get('/vote/:type/:id', routes.vote);
 
 app.listen(3000);

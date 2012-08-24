@@ -8,10 +8,23 @@ block content
           .container
             .row
               .span6
-                h4= error.name
+                h4= error.ename
                 pre(style='background-color: white;')= error.description
               .span6
                 h4 Cause:
                 p= error.cause
                 h4 Solution:
                 p= error.solution
+                .pull-right
+                  .btn-toolbar
+                    .btn-group
+                      a.btn(alt='-1', href='/vote/love/#{error.id}')
+                        i.icon-thumbs-up
+                      a.btn(alt='+1', href='/vote/hate/#{error.id}')
+                        i.icon-thumbs-down
+                      a.btn(href='#', style='color: #{error.rep > 0 ? "green" : "red"}')= error.rep
+                    .btn-group
+                      a.btn(alt='Edit', href='/errors/#{error.id}/edit')
+                        i.icon-edit
+                        | &nbsp;Edit
+

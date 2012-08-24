@@ -1,0 +1,21 @@
+form.form-horizontal(method='post', action='#{typeof error !== "undefined" ? "/errors/" + error.id + "/edit" : "/errors"}')
+  .control-group
+    label.control-label(for='ename') Name:
+    .controls
+      input(type='text', name='ename', id='ename', value='#{(typeof error !== "undefined" && error.ename) || ""}')
+  .control-group
+    label.control-label(for='description') Description:
+    .controls
+      textarea(rows=3, id='description', name='description')= (typeof error !== "undefined" && error.description) || ""
+  .control-group
+    label.control-label(for='cause') Cause:
+    .controls
+      textarea(rows=3, id='cause', name='cause')= (typeof error !== "undefined" && error.cause) || ""
+  .control-group
+    label.control-label(for='solution') Solution:
+    .controls
+      textarea(rows=3, id='solution', name='solution')= (typeof error !== "undefined" && error.solution) || ""
+   .control-group
+    .controls
+      button.btn(type='submit') Save
+

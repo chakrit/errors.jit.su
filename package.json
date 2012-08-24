@@ -1,6 +1,6 @@
 {
   "name": "errors",
-  "version": "0.0.1-1",
+  "version": "0.0.1-5",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -9,6 +9,10 @@
     "express": "3.0.0rc3",
     "resourceful": "*",
     "jade": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "assert": "*"
   },
   "subdomain": "errors",
   "engines": {

@@ -14,31 +14,12 @@ html
         button.close(data-dismiss='modal') ×
         h3 New Error
       .modal-body
-        form.form-horizontal(method='post', action='/errors')
-          .control-group
-            label.control-label(for='ename') Name:
-            .controls
-              input(type='text', name='ename', id='ename')
-          .control-group
-            label.control-label(for='description') Description:
-            .controls
-              textarea(rows=3, id='description', name='description') 
-          .control-group
-            label.control-label(for='cause') Cause:
-            .controls
-              textarea(rows=3, id='cause', name='cause')
-          .control-group
-            label.control-label(for='solution') Solution:
-            .controls
-              textarea(rows=3, id='solution', name='solution')
-          .control-group
-            .controls
-              button.btn(type='submit') Save
+        include errorForm
 
     .navbar.navbar-fixed-top
       .navbar-inner
         .container 
-          a.brand(href='#') Common Errors
+          a.brand(href='/') Common Errors
           .nav-collapse
             ul.nav
               li
